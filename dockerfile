@@ -42,4 +42,4 @@ COPY . .
 EXPOSE 8081
 
 # Run the application.
-CMD ["python", "ageent.py", "start"]
+CMD ["python", "agent.py", "start"]
