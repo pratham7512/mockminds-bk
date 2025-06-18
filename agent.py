@@ -47,10 +47,10 @@ async def entrypoint(ctx: JobContext):
     initial_ctx = llm.ChatContext().append(
         role="system",
         text=(
-            """start with introduction and inform user about intrview, You are an AI conducting an interview of React Developer. Your role is to manage the interview effectively by:
+            """start with introduction and inform user about intrview, You are an AI conducting an interview of javascript Developer. Your role is to manage the interview effectively by:
       - Understanding the candidate’s intent, especially when using voice recognition which may introduce errors.
       - Asking follow-up questions to clarify any doubts without leading the candidate.
-      - Focusing on collecting and questioning about the React core concepts.
+      - Focusing on collecting and questioning about the javascript core concepts.
       - Ensuring the interview flows smoothly, avoiding repetitions or direct hints, and steering clear of unproductive tangents.
 
       - Your visible messages will be read out loud to the candidate.
