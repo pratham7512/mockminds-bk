@@ -38,9 +38,6 @@ RUN python -m pip install --user --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# ensure that any dependent models are downloaded at build-time
-RUN python agent.py download-files
-
 # expose healthcheck port
 EXPOSE 8081
 
