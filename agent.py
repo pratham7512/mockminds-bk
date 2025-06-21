@@ -34,7 +34,7 @@ async def entrypoint(ctx: agents.JobContext):
     session = AgentSession(
         stt=groq.STT(model="whisper-large-v3-turbo"),
         llm=groq.LLM(model="meta-llama/llama-4-scout-17b-16e-instruct"),
-        tts=elevenlabs.TTS(voice=voice,model="eleven_flash_v2_5"),
+        tts=elevenlabs.TTS(voice_id="vO7hjeAjmsdlGgUdvPpe",model="eleven_flash_v2_5"),
         vad=silero.VAD.load(),
     )
 
