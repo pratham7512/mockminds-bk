@@ -6,7 +6,7 @@ from livekit.plugins import (
     openai,
     elevenlabs,
     silero,
-    openai,
+    groq,
     noise_cancellation
 )
 
@@ -32,8 +32,8 @@ class Assistant(Agent):
 
 async def entrypoint(ctx: agents.JobContext):
     session = AgentSession(
-        stt=openai.STT.with_groq(model="whisper-large-v3-turbo"),
-        llm=openai.LLM.with_groq(model="llama-3.3-70b-versatile"),
+        stt=groq.STT(model="whisper-large-v3-turbo"),
+        llm=groq.LLM(model="meta-llama/llama-4-scout-17b-16e-instruct"),
         tts=elevenlabs.TTS(voice=voice,model="eleven_flash_v2_5"),
         vad=silero.VAD.load(),
     )
